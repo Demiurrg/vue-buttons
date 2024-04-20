@@ -12,6 +12,7 @@ import fourteenthButton from './fourteenthButton';
 import eighthButton from './eighthButton'
 import NinthButton from "./NinthButton";
 import seventhButton from './seventhButton'
+import newsStore from '@/store/storeBuletin/newsStore'
 
 export default {
   namespaced: true,
@@ -20,6 +21,7 @@ export default {
   mutations: {},
   modules: {
     modals,
+    newsStore,
     firstButton,
     NinthButton,
     ThirteenthButtonStore,
