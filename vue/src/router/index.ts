@@ -109,7 +109,7 @@ const routes = [
     component: Article
   },
   {
-    path: '/post]/:id',
+    path: '/post/:id',
     name: RouteNames.POST,
     component: PostArticle
   }
