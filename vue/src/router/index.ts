@@ -16,6 +16,9 @@ import FifthButtonPage from "@/components/pages/FifthButtonPage.vue";
 import SeventhButtonPage from '@/components/pages/SeventhButtonPage.vue';
 import ThirteenButtons from "@/components/pages/ThirteenButtons.vue";
 import EleventhPage from "@/components/pages/EleventhPage.vue";
+import News from '@/components/pages/buletin/News.vue';
+import Article from "@/components/pages/buletin/Article.vue";
+import PostArticle from '@/components/pages/buletin/PostArticle.vue';
 
 Vue.use(VueRouter)
 
@@ -94,6 +97,21 @@ const routes = [
     path: '/seventh_button',
     name: RouteNames.SEVENTH_BUTTON,
     component: SeventhButtonPage
+  },
+  {
+    path: '/news',
+    name: RouteNames.NEWS,
+    component: News
+  },
+  {
+    path: '/article',
+    name: RouteNames.ARTICLE,
+    component: Article
+  },
+  {
+    path: '/post]/:id',
+    name: RouteNames.POST,
+    component: PostArticle
   }
 ]
 
