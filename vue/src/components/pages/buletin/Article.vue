@@ -2,17 +2,17 @@
   <div class="article-container">
     <PageHeader/>
     <div class="news-article">
-      <p class="news-article__date"> {{getNewsById(this.$route.params.id).date}}</p>
-      <h2 class="news-article__title">{{getNewsById(this.$route.params.id).title}}</h2>
+      <p class="news-article__date">{{ currArticle.date }}</p>
+      <h2 class="news-article__title">{{ currArticle.title }}</h2>
       <div class="news-article__container">
         <img
-          :src="getNewsById(this.$route.params.id).image"
+          :src="currArticle.image"
           alt="news-image"
           class="news-article__container__image"
         />
       </div>
-      <p class="news-article__description"> {{getNewsById(this.$route.params.id).description}}</p>
-      <p class="news-article__text" style="white-space: pre-line"> {{getNewsById(this.$route.params.id).text}}</p>
+      <p class="news-article__description">{{ currArticle.description }}</p>
+      <p class="news-article__text">{{ currArticle.text }}</p>
     </div>
     <PageFooter/>
   </div>
@@ -32,12 +32,15 @@ export default {
   computed: {
     ...mapGetters("newsStore", [
       "getNewsById"
-    ])
+    ]),
+    currArticle () {
+      return this.getNewsById(this.$route.params.id)
+    }
   }
 }
 </script>
 
-<style lang="less">
+<style scoped lang="less">
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Roboto:wght@400;500;700&display=swap');
 
@@ -85,6 +88,7 @@ export default {
   &__text {
     font-family: 'Roboto', serif;
     font-size: 16px;
+    white-space: pre-line
   }
 }
 </style>

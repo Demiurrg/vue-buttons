@@ -1,15 +1,15 @@
 <template>
-  <RouterLink :to="{ name: routeNames.ARTICLE, params: { id:id } }">
+  <RouterLink :to="{ name: routeNames.ARTICLE, params: { id:news.id } }">
     <div class="small-news">
       <img
-        :src="image"
+        :src="news.image"
         alt="news-image"
         class="small-news__image"
       />
       <div class="small-news__text">
-        <div class="small-news__text__date">{{ date }}</div>
-        <div class="small-news__text__title">{{ title }}</div>
-        <div class="small-news__text__description">{{ description }}</div>
+        <div class="small-news__text__date">{{ news.date }}</div>
+        <div class="small-news__text__title">{{ news.title }}</div>
+        <div class="small-news__text__description">{{ news.description }}</div>
       </div>
     </div>
   </RouterLink>
@@ -23,25 +23,9 @@ export default {
   components: {
   },
   props: {
-    id: {
-      type: Number,
-      require: 'true'
-    },
-    image: {
-      type: String,
-      default: 'image'
-    },
-    date: {
-      type: String,
-      default: ''
-    },
-    title: {
-      type: String,
-      default: ''
-    },
-    description: {
-      type: String,
-      default: ''
+    news: {
+      type: Object,
+      required: 'true'
     }
   },
   computed: {

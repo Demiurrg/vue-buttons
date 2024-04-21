@@ -10,11 +10,7 @@
       <SecondCard
         v-for="news in filteredNews"
         :key="news.id"
-        :id="news.id"
-        :image="news.image"
-        :date="news.date"
-        :title="news.title"
-        :description="news.description"
+        :news="news"
       />
     </div>
     <PageFooter />
@@ -69,7 +65,7 @@ export default {
 };
 </script>
 
-<style lang="less">
+<style scoped lang="less">
 .news {
   display: flex;
   flex-direction: column;
