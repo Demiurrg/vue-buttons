@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomePage from '../components/pages/Home.vue'
-import {RouteNames} from './routes'
+import { RouteNames } from './routes'
 import News from '@/components/pages/buletin/News.vue';
 import Article from "@/components/pages/buletin/Article.vue";
 import PostArticle from '@/components/pages/buletin/PostArticle.vue';
