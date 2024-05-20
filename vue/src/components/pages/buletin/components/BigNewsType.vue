@@ -1,18 +1,18 @@
 <template>
   <RouterLink :to="{ name: routeNames.ARTICLE, params: { id:currentNews['id'] } }">
     <div class="big-news">
-      <div class="big-news__image" :style="{ backgroundImage: 'url(' + currentNews['image'] + ')' }"></div>
+      <div class="big-news__image" :style="{ backgroundImage: 'url(' + currentNews.image + ')' }"></div>
         <div class="big-news__text">
           <div class="big-news__text__date">
-            {{ currentNews['date'] }}
+            {{ currentNews.date }}
           </div>
 
             <div class="big-news__text__title">
-              {{ currentNews['title'] }}
+              {{ currentNews.title }}
             </div>
 
           <div class="big-news__text__description">
-            {{ currentNews['description'] }}
+            {{ currentNews.description }}
           </div>
         </div>
     </div>
