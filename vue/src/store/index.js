@@ -1,5 +1,6 @@
 import modals from './modals'
-import newsStore from '@/store/storeBuletin/newsStore'
+import buttonTatarskayaFedotova from './storeBlogTatarskayaFedotova/buttonTatarskayaFedotova'
+import newsStoreTatarskayaFedotova from './storeBlogTatarskayaFedotova/newsStoreTatarskayaFedotova'
 
 export default {
   namespaced: true,
@@ -8,6 +9,7 @@ export default {
   mutations: {},
   modules: {
     modals,
-    newsStore
+    buttonTatarskayaFedotova,
+    newsStoreTatarskayaFedotova
   }
 }
